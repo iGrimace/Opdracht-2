@@ -6,22 +6,22 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
-    min-height: 100vh; /* Zorgt ervoor dat de body de volledige hoogte van het scherm inneemt */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Zorgt ervoor dat de footer onderaan blijft */
+    flex-direction: column;
 }
 
 header {
-    background: #4CAF50; /* Groene achtergrond */
+    background: #4CAF50;
     color: #fff;
     padding: 1rem 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 1rem; /* Maak de tekst kleiner */
+    margin: 0; /* Verwijder standaard marges */
+    font-weight: bold; /* Behoud vetgedrukte tekst */
 }
 
 header .tagline {
@@ -54,15 +54,15 @@ nav ul li a:hover {
 
 main {
     padding: 20px;
-    max-width: 1200px; /* Breedte van de pagina */
+    max-width: 1200px;
     margin: 0 auto;
-    flex: 1; /* Zorgt ervoor dat de main de resterende ruimte inneemt */
+    flex: 1;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Twee kolommen */
-    gap: 20px; /* Ruimte tussen de secties */
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 section {
@@ -73,7 +73,7 @@ section {
 }
 
 section h2 {
-    color: #4CAF50; /* Groene kleur voor koppen */
+    color: #4CAF50;
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 0.5rem;
     font-size: 1.8rem;
@@ -95,71 +95,27 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 0.5rem 0; /* Kleinere padding */
-    font-size: 0.9rem; /* Kleinere tekst */
-    position: static; /* Zorgt ervoor dat de footer niet meescrolt */
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    position: static;
     width: 100%;
-    margin-top: auto; /* Zorgt ervoor dat de footer onderaan blijft */
+    margin-top: auto;
 }
 
 /* Stijlen voor afbeeldingen */
 .section-image {
-    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet breder is dan de section */
-    height: auto; /* Behoudt de aspect ratio van de afbeelding */
-    border-radius: 8px; /* Afgeronde hoeken */
-    margin-bottom: 1rem; /* Ruimte onder de afbeelding */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
-}
-
-/* Optioneel: Afbeeldingen in grid aanpassen */
-.grid-container .section-image {
-    width: 100%; /* Zorgt ervoor dat de afbeelding de volledige breedte van de kolom inneemt */
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
-    width: 100px; /* Pas de breedte aan */
-    height: auto; /* Behoud de aspect ratio */
+    width: 100px;
+    height: auto;
 }
 
-/* Mediaquery's voor mobiele apparaten */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header .tagline {
-        font-size: 1rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    main {
-        padding: 10px;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr; /* Eén kolom op mobiel */
-    }
-
-    section {
-        padding: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    section h3 {
-        font-size: 1.3rem;
-    }
-
-    section p {
-        font-size: 1rem;
-    }
-}
 /* Stijlen voor de Over ons pagina */
 .intro {
     text-align: center;
@@ -208,37 +164,9 @@ footer {
     margin-bottom: 1rem;
 }
 
-.team-member p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #444;
-}
-
-/* Responsive design voor mobiele apparaten */
-@media (max-width: 768px) {
-    .team {
-        flex-direction: column;
-    }
-
-    .team-member {
-        flex: 1 1 100%;
-    }
-
-    .intro h2 {
-        font-size: 1.5rem;
-    }
-
-    .team-member h3 {
-        font-size: 1.3rem;
-    }
-
-    .team-member p {
-        font-size: 1rem;
-    }
-}
 /* Stijlen voor het contactformulier */
 .contact-form {
-    max-width: 800px; /* Verander dit naar een grotere waarde voor een breder formulier */
+    max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
     background: #fff;
@@ -285,7 +213,7 @@ footer {
 }
 
 .form-group textarea {
-    resize: vertical; /* Sta verticale resizing toe */
+    resize: vertical;
 }
 
 .form-group button {
@@ -305,9 +233,46 @@ footer {
 
 /* Mediaquery's voor mobiele apparaten */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header .tagline {
+        font-size: 1rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 1.3rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
     .contact-form {
         padding: 1rem;
-        max-width: 100%; /* Volledige breedte op mobiele apparaten */
+        max-width: 100%;
     }
 
     .contact-form h2 {
@@ -323,7 +288,28 @@ footer {
         width: 100%;
         padding: 0.75rem;
     }
+
+    .team {
+        flex-direction: column;
+    }
+
+    .team-member {
+        flex: 1 1 100%;
+    }
+
+    .intro h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-member h3 {
+        font-size: 1.3rem;
+    }
+
+    .team-member p {
+        font-size: 1rem;
+    }
 }
+
 /* Mediaquery's voor grote schermen */
 @media (min-width: 769px) {
     header h1 {
