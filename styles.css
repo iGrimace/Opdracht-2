@@ -126,6 +126,16 @@ section p {
     margin-bottom: 2rem;
 }
 
+.intro-image {
+    width: 100%; /* Pas de breedte aan aan de container */
+    max-width: 400px; /* Beperk de maximale breedte */
+    height: auto; /* Behoud de verhoudingen */
+    display: block; /* Zorg ervoor dat de afbeelding op een nieuwe regel staat */
+    margin: 1rem auto; /* Centreer de afbeelding en voeg wat ruimte toe */
+    border-radius: 8px; /* Afgeronde hoeken */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+}
+
 .team {
     display: flex;
     flex-wrap: wrap;
