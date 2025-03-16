@@ -138,46 +138,38 @@ section p {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    flex: 1 1 calc(50% - 2rem); /* Twee boxen naast elkaar op desktop */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centreer inhoud horizontaal */
+    max-width: 400px; /* Kleinere breedte voor kaartjes */
+    margin: 0 auto 2rem; /* Centreer en voeg marge toe */
+    text-align: center; /* Centreer alle inhoud */
+}
+
+.team-image {
+    width: 100%; /* Afbeelding neemt de volledige breedte in */
+    height: 200px; /* Vaste hoogte voor afbeelding */
+    border-radius: 8px 8px 0 0; /* Afgeronde hoeken alleen bovenaan */
+    object-fit: cover; /* Zorg ervoor dat de afbeelding goed past */
+    margin-bottom: 1rem;
 }
 
 .team-member h3 {
     color: #4CAF50;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    text-align: center; /* Centreer de koptekst */
 }
 
 .team-member .role {
     font-style: italic;
     color: #555;
     margin-bottom: 1rem;
-    text-align: center; /* Centreer de rol */
-}
-
-.team-image {
-    width: 100%;
-    max-width: 300px; /* Beperk de maximale breedte van de afbeelding */
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 1rem;
 }
 
 .team-member p {
-    text-align: justify; /* Tekst uitvullen voor een nette uitstraling */
+    text-align: justify;
 }
 
 /* Mediaquery voor mobiele apparaten */
 @media (max-width: 768px) {
     .team-member {
-        flex: 1 1 100%; /* Eén box per rij op mobiel */
-    }
-
-    .team-image {
         max-width: 100%; /* Volledige breedte op mobiel */
     }
 }
