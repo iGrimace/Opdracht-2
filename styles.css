@@ -90,12 +90,6 @@ section h2 {
     margin-bottom: 1rem;
 }
 
-section h3 {
-    color: #555;
-    margin-top: 1.5rem;
-    font-size: 1.5rem;
-}
-
 section p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -121,91 +115,26 @@ section p {
 /* ==================== */
 /* Over ons pagina      */
 /* ==================== */
+.intro {
+    margin-bottom: 2rem;
+}
 
 .intro-content {
-    display: flex; /* Maak een flexbox-container */
-    align-items: flex-start; /* Uitlijnen aan de bovenkant */
-    gap: 1.5rem; /* Ruimte tussen de afbeelding en de tekst */
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
 }
 
 .intro-image {
-    width: 200px; /* Vaste breedte voor de afbeelding */
-    height: auto; /* Behoud de verhoudingen */
-    border-radius: 8px; /* Afgeronde hoeken */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
-    flex-shrink: 0; /* Voorkom dat de afbeelding krimpt */
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 .intro-content p {
-    margin: 0; /* Verwijder standaard marges */
-}
-
-/* Mediaquery voor mobiele apparaten */
-@media (max-width: 768px) {
-    .intro-content {
-        flex-direction: column; /* Afbeelding boven tekst op mobiel */
-    }
-
-    .intro-image {
-        width: 100%; /* Volledige breedte op mobiel */
-        max-width: 300px; /* Beperk de maximale breedte */
-        margin: 0 auto 1rem; /* Centreer de afbeelding en voeg ruimte toe */
-    }
-}
-
-.team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.team-member {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Eén subtiele schaduw */
-    max-width: 400px;
-    margin: 0 auto 2rem;
-    text-align: center;
-}
-
-.team-image {
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    border-radius: 8px 8px 0 0;
-    object-fit: cover;
-    object-position: top;
-    margin-bottom: 1rem;
-}
-
-.team-member h3 {
-    color: #4CAF50;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.team-member .role {
-    font-style: italic;
-    color: #555;
-    margin-bottom: 1rem;
-}
-
-.team-member p {
-    text-align: justify;
-    margin: 0; /* Zorg ervoor dat er geen extra marges zijn */
-}
-
-/* Mediaquery voor mobiele apparaten */
-@media (max-width: 768px) {
-    .team-member {
-        max-width: 100%; /* Volledige breedte op mobiel */
-    }
-
-    .team-image {
-        max-height: 150px; /* Kleinere afbeeldingen op mobiel */
-    }
+    margin: 0;
 }
 
 /* ==================== */
@@ -308,24 +237,14 @@ section p {
         padding: 10px;
     }
 
-    .grid-container {
-        grid-template-columns: 1fr;
+    .intro-content {
+        flex-direction: column;
     }
 
-    section {
-        padding: 1rem;
-    }
-
-    section h2 {
-        font-size: 1.5rem;
-    }
-
-    section h3 {
-        font-size: 1.3rem;
-    }
-
-    section p {
-        font-size: 1rem;
+    .intro-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1rem;
     }
 
     .contact-container {
@@ -347,14 +266,6 @@ section p {
     .form-group button {
         width: 100%;
         padding: 0.75rem;
-    }
-
-    .team {
-        flex-direction: column;
-    }
-
-    .team-member {
-        flex: 1 1 100%;
     }
 }
 
