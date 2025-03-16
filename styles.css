@@ -90,6 +90,12 @@ section h2 {
     margin-bottom: 1rem;
 }
 
+section h3 {
+    color: #555;
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+}
+
 section p {
     font-size: 1.1rem;
     line-height: 1.8;
@@ -100,16 +106,48 @@ section p {
 /* Afbeeldingen         */
 /* ==================== */
 .section-image {
-    max-width: 100%;
+    width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem auto;
+    display: block;
 }
 
 .logo {
     width: 100px;
     height: auto;
+}
+
+/* ==================== */
+/* Homepagina           */
+/* ==================== */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.welkom,
+.intro,
+.specialisatie,
+.toonvorming {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Mediaquery voor desktop */
+@media (min-width: 769px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .specialisatie,
+    .toonvorming {
+        grid-column: span 2;
+    }
 }
 
 /* ==================== */
@@ -135,6 +173,19 @@ section p {
 
 .intro-content p {
     margin: 0;
+}
+
+/* Mediaquery voor mobiele apparaten */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column;
+    }
+
+    .intro-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1rem;
+    }
 }
 
 /* ==================== */
@@ -235,16 +286,6 @@ section p {
 
     main {
         padding: 10px;
-    }
-
-    .intro-content {
-        flex-direction: column;
-    }
-
-    .intro-image {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 1rem;
     }
 
     .contact-container {
