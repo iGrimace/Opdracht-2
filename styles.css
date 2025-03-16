@@ -1,4 +1,6 @@
-/* Algemene stijlen */
+/* ==================== */
+/* Algemene stijlen     */
+/* ==================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -19,9 +21,9 @@ header {
 }
 
 header h1 {
-    font-size: 1rem; /* Maak de tekst kleiner */
-    margin: 0; /* Verwijder standaard marges */
-    font-weight: bold; /* Behoud vetgedrukte tekst */
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
 }
 
 header .tagline {
@@ -59,17 +61,25 @@ main {
     flex: 1;
 }
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: auto;
 }
 
+/* ==================== */
+/* Algemene secties     */
+/* ==================== */
 section {
     background: #fff;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
 }
 
 section h2 {
@@ -77,6 +87,7 @@ section h2 {
     border-bottom: 2px solid #4CAF50;
     padding-bottom: 0.5rem;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 section h3 {
@@ -91,18 +102,9 @@ section p {
     color: #444;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 0.5rem 0;
-    font-size: 0.9rem;
-    position: static;
-    width: 100%;
-    margin-top: auto;
-}
-
-/* Stijlen voor afbeeldingen */
+/* ==================== */
+/* Afbeeldingen         */
+/* ==================== */
 .section-image {
     max-width: 100%;
     height: auto;
@@ -116,17 +118,12 @@ footer {
     height: auto;
 }
 
-/* Stijlen voor de Over ons pagina */
+/* ==================== */
+/* Over ons pagina      */
+/* ==================== */
 .intro {
     text-align: center;
     margin-bottom: 2rem;
-}
-
-.intro h2 {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-    font-size: 1.8rem;
 }
 
 .team {
@@ -164,66 +161,32 @@ footer {
     margin-bottom: 1rem;
 }
 
-/* Stijlen voor de contactpagina */
+/* ==================== */
+/* Contactpagina        */
+/* ==================== */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Linkerkolom smaller, rechterkolom breder */
-    gap: 2rem; /* Ruimte tussen de kolommen */
-    max-width: 1200px; /* Maximale breedte van de container */
-    margin: 0 auto; /* Centreer de container */
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
-.adresgegevens {
-    background: #fff;
-    padding: 1.5rem;
+.adresgegevens iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
     border-radius: 8px;
+    margin-top: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.adresgegevens h2 {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.adresgegevens p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-}
-
-.adresgegevens a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-.adresgegevens a:hover {
-    text-decoration: underline;
 }
 
 .contact-formulier {
     background: #fff;
-    padding: 4rem; /* Meer padding aan de binnenkant van de container */
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.contact-formulier h2 {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
-}
-
-.contact-formulier p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 1.5rem;
 }
 
 .form-group {
@@ -259,7 +222,7 @@ footer {
 }
 
 .form-group textarea {
-    resize: vertical; /* Sta verticale resizing toe */
+    resize: vertical;
 }
 
 .form-group button {
@@ -277,41 +240,9 @@ footer {
     background-color: #45a049;
 }
 
-/* Mediaquery's voor mobiele apparaten */
-@media (max-width: 768px) {
-    .contact-container {
-        grid-template-columns: 1fr; /* Eén kolom op mobiel */
-        padding: 1rem;
-    }
-
-    .adresgegevens,
-    .contact-formulier {
-        padding: 1rem;
-    }
-
-    .adresgegevens h2,
-    .contact-formulier h2 {
-        font-size: 1.5rem;
-    }
-
-    .adresgegevens p,
-    .contact-formulier p {
-        font-size: 1rem;
-    }
-
-    .form-group input,
-    .form-group textarea,
-    .form-group select {
-        padding: 0.5rem;
-    }
-
-    .form-group button {
-        width: 100%;
-        padding: 0.75rem;
-    }
-}
-
-/* Mediaquery's voor mobiele apparaten */
+/* ==================== */
+/* Mediaquery's         */
+/* ==================== */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2rem;
@@ -350,17 +281,19 @@ footer {
         font-size: 1rem;
     }
 
-    .contact-form {
+    .contact-container {
+        grid-template-columns: 1fr;
         padding: 1rem;
-        max-width: 100%;
     }
 
-    .contact-form h2 {
-        font-size: 1.5rem;
+    .adresgegevens,
+    .contact-formulier {
+        padding: 1rem;
     }
 
     .form-group input,
-    .form-group textarea {
+    .form-group textarea,
+    .form-group select {
         padding: 0.5rem;
     }
 
@@ -376,21 +309,8 @@ footer {
     .team-member {
         flex: 1 1 100%;
     }
-
-    .intro h2 {
-        font-size: 1.5rem;
-    }
-
-    .team-member h3 {
-        font-size: 1.3rem;
-    }
-
-    .team-member p {
-        font-size: 1rem;
-    }
 }
 
-/* Mediaquery's voor grote schermen */
 @media (min-width: 769px) {
     header h1 {
         font-size: 2.5rem;
