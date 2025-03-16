@@ -126,14 +126,35 @@ section p {
     margin-bottom: 2rem;
 }
 
+.intro-content {
+    display: flex; /* Maak een flexbox-container */
+    align-items: flex-start; /* Uitlijnen aan de bovenkant */
+    gap: 1.5rem; /* Ruimte tussen de afbeelding en de tekst */
+}
+
 .intro-image {
-    width: 100%; /* Pas de breedte aan aan de container */
-    max-width: 400px; /* Beperk de maximale breedte */
+    width: 200px; /* Vaste breedte voor de afbeelding */
     height: auto; /* Behoud de verhoudingen */
-    display: block; /* Zorg ervoor dat de afbeelding op een nieuwe regel staat */
-    margin: 1rem auto; /* Centreer de afbeelding en voeg wat ruimte toe */
     border-radius: 8px; /* Afgeronde hoeken */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtiele schaduw */
+    flex-shrink: 0; /* Voorkom dat de afbeelding krimpt */
+}
+
+.intro-content p {
+    margin: 0; /* Verwijder standaard marges */
+}
+
+/* Mediaquery voor mobiele apparaten */
+@media (max-width: 768px) {
+    .intro-content {
+        flex-direction: column; /* Afbeelding boven tekst op mobiel */
+    }
+
+    .intro-image {
+        width: 100%; /* Volledige breedte op mobiel */
+        max-width: 300px; /* Beperk de maximale breedte */
+        margin: 0 auto 1rem; /* Centreer de afbeelding en voeg ruimte toe */
+    }
 }
 
 .team {
